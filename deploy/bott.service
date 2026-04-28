@@ -1,0 +1,16 @@
+[Unit]
+Description=Bott Telegram Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/bott
+EnvironmentFile=/opt/bott/.env
+ExecStart=/opt/bott/.venv/bin/python -c "from main import create_handler; print(create_handler())"
+Restart=always
+RestartSec=3
+User=bot
+Group=bot
+
+[Install]
+WantedBy=multi-user.target

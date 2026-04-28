@@ -1,0 +1,7 @@
+services:
+  bott:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
+    command: ["python", "-c", "from main import create_handler; print(create_handler())"]

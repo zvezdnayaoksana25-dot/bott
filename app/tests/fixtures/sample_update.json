@@ -1,0 +1,11 @@
+{
+  "update_id": 1,
+  "message": {
+    "message_id": 10,
+    "text": "ping",
+    "from": {
+      "id": 42,
+      "first_name": "Alex"
+    }
+  }
+}
